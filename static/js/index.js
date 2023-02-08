@@ -10,18 +10,18 @@
 //   }
 // })();
 
-(function () {
-  var requestConfig = {
-    method: 'POST',
-    credentials: 'include',
-    headers: {
-      'Accept':'application/json, text/plain, */*',
-      'Content-Type': 'application/x-www-form-urlencoded' ,
-      'Access-Control-Allow-Origin': '*'              
-    }      
-  };
+// (function () {
+//   var requestConfig = {
+//     method: 'POST',
+//     credentials: 'include',
+//     headers: {
+//       'Accept':'application/json, text/plain, */*',
+//       'Content-Type': 'application/x-www-form-urlencoded' ,
+//       'Access-Control-Allow-Origin': '*'              
+//     }      
+//   };
 
-})();
+// })();
 
 // 歷年股利;
 (function () {
