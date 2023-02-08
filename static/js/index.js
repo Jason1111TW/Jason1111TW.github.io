@@ -1,14 +1,13 @@
-// (function () {
-//   //var requestURL =  "https://raw.githubusercontent.com/Jason1111TW/Test/main/3010.json?token=GHSAT0AAAAAAB6O2FYTL2JFYJ6UIZMW6Z4MY7D7HIQ";
-//   var requestURL = "./OutputData/3010.json"
-//   var request = new XMLHttpRequest();
-//   request.open('POST', requestURL);
-//   request.responseType = 'json';
-//   request.send();
-//   request.onload = function() {
-//     console.log("TEST");
-//   }
-// })();
+(function () {
+  var requestURL = "/static/data/3010.json"
+  var request = new XMLHttpRequest();
+  request.open('POST', requestURL);
+  request.responseType = 'json';
+  request.send();
+  request.onload = function() {
+    console.log("TEST");
+  }f
+})();
 
 // (function () {
 //   var requestConfig = {
