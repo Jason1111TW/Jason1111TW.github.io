@@ -6,7 +6,7 @@
   request.send();
   request.onload = function() {
     console.log("TEST");
-  }f
+  }
 })();
 
 // (function () {
