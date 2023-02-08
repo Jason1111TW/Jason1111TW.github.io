@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+  <head>
+    <meta http-equiv="Content-Type" content="application/json; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/index.css" />
+    <title>財報數據化</title>
+    Access-Control-Allow-Origin: *
+  </head>
+  <body>
+    <!-- 头部 -->
+    <header>
+      <h1>3010 華立</h1>
+      <div class="show-time"></div>
+      <script>
+        var t = null;
+        t = setTimeout(time, 1000);
+        function time() {
+          clearTimeout(t);
+          dt = new Date();
+          var y = dt.getFullYear();
+          var mt = dt.getMonth() + 1;
+          var day = dt.getDate();
+          var h = dt.getHours();
+          var m = dt.getMinutes();
+          var s = dt.getSeconds();
+          document.querySelector(".show-time").innerHTML =
+            "當前時間：" +
+            y +
+            "年" +
+            mt +
+            "月" +
+            day +
+            "日-" +
+            h +
+            "時" +
+            m +
+            "分" +
+            s +
+            "秒";
+          t = setTimeout(time, 1000);
+        }
+      </script>
+    </header>
+
+    <section class="mainbox">
+      <!-- 左側盒子 -->
+      <div class="column">
+        <div class="panel Dividend">
+          <h2>歷年股利</h2>
+          <div class="chart"></div>
+          <div class="panel-footer"></div>
+        </div>
+        <div class="panel Sharehold">
+          <h2>股東結構</h2>
+          <div class="chart"></div>
+          <div class="panel-footer"></div>
+        </div>
+        <div class="panel Analysis">
+          <h2>股票體質分析</h2>
+          <div class="chart"></div>
+          <div class="panel-footer"></div>
+        </div>
+      </div>
+      <!-- 中間盒子 -->
+      <div class="column">
+        <div class="panel K-line">
+          <h2>K線圖</h2>
+          <div class="chart"></div>
+          <div class="panel-footer"></div>
+        </div>
+        <div class="panel FinDetail">
+          <h2>財務比率表</h2>
+          <div class="chart"></div>
+          <div class="panel-footer"></div>
+        </div>
+        <div class="panel pie1">
+          <h2></h2>
+          <div class="chart"></div>
+          <div class="panel-footer"></div>
+        </div>
+      </div>
+      <!-- 右側盒子 -->
+      <div class="column">
+        <div class="panel Total">
+          <h2>總表</h2>
+          <div class="chart"></div>
+          <div class="panel-footer"></div>
+        </div>
+        <div class="panel Year">
+          <h2>年資料</h2>
+          <div class="chart"></div>
+          <div class="panel-footer"></div>
+        </div>
+        <div class="panel Season">
+          <h2>季資料</h2>
+          <div class="chart"></div>
+          <div class="panel-footer"></div>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/flexible.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/index.js"></script>
+    <script type="text/json" src="./3010.json"></script>
+
+  </body>
+    
+</html>
