@@ -1,11 +1,13 @@
 (function () {
   var requestURL = "/static/data/3010.json"
   var request = new XMLHttpRequest();
-  request.open('POST', requestURL);
+  request.open('GET', requestURL);
   request.responseType = 'json';
   request.send();
   request.onload = function() {
     console.log("TEST");
+    var JSONdata = request.response;
+    console.log(JSONdata);
   }
 })();
 
