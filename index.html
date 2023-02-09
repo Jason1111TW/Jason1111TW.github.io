@@ -109,7 +109,7 @@
       var stock_num = "3010";
       var JSONdata = GetJSON(stock_num);
       // 歷年股利;
-      var temp = JSONdata.response
+      var temp = JSON.stringify(JSONdata.response)
       console.log("-------------------------------------------")
       console.log("JSON DATA:",temp)
       console.log("-------------------------------------------")
