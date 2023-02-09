@@ -74,7 +74,7 @@
           <div class="chart"></div>
           <div class="panel-footer"></div>
         </div>
-        <div class="panel pie1">
+        <div class="panel Total">
           <h2></h2>
           <div class="chart"></div>
           <div class="panel-footer"></div>
@@ -106,9 +106,11 @@
     <script src="/static/js/index.js"></script>  
 
     <script>
-      var stock_num = "3010"
-      var JSONdata = GetJSON(stock_num)
-      console.log(JSONdata)
+      var stock_num = "3010";
+      var JSONdata = GetJSON(stock_num);
+      // 歷年股利;
+      console.log("歷年股利",JSONdata.response['年資料']['股利']);
+      Echarts_Dividend(JSONdata.response['年資料']['股利']);
     </script> 
 
   </body>
