@@ -8,8 +8,12 @@ function GetJSON(stock_num){
     if (request.status != 200) {
       console.log("Error on GetJSON!")
     }
-    return this.responseText
+    temp = this.responseText
+    console.log(temp)
+    return temp
   }
+  console.log("outside",temp)
+  return temp
 }
 
 // 歷年股利;
