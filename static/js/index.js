@@ -1,5 +1,5 @@
 // 讀取JSON資料;
-function draw(stock_num){
+(function () {
   var requestURL = "/static/data/" + stock_num + ".json";
   var request = new XMLHttpRequest();
   request.open('GET', requestURL, true);
@@ -1038,5 +1038,5 @@ function draw(stock_num){
     myChart.resize();
   })
 })();
-}
+})();
 
