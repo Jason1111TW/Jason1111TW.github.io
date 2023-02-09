@@ -15,9 +15,9 @@ function GetJSON(stock_num){
 var stock_num = "3010"
 var JSONdata = GetJSON(stock_num)
 
-// 歷年股利;
-(function (JSONdata) {
-  console.log("Check~", JSONdata)
+// 歷年股利; DIVIDEND
+(function () {
+  console.log("Check~")
   var myChart = echarts.init(document.querySelector(".Dividend .chart"));
   var option = {
 
@@ -31,7 +31,7 @@ var JSONdata = GetJSON(stock_num)
   })
 })();
 
-// 股東結構;
+// 股東結構; Sharehold
 (function () {
 
 })();
@@ -49,7 +49,7 @@ var JSONdata = GetJSON(stock_num)
 })();
 
 
-// 財務比率表;
+// 財務比率表; FinDetail
 (function () {
 
 })();
@@ -60,12 +60,12 @@ var JSONdata = GetJSON(stock_num)
 
 })();
 
-// 年資料;
+// 年資料; ProfitIndicator
 (function () {
 
 })();
 
-// 季資料;
+// 季資料; ProfitIndicator
 (function () {
 
 })();
