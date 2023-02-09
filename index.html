@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
   <head>
-    <meta http-equiv="Content-Type" content="application/json; charset=utf-8">
+    <meta http-equiv="Content-Type" content="application/json; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/static/css/index.css" />
     <title>財報數據化</title>
@@ -109,7 +109,9 @@
       var stock_num = "3010";
       var JSONdata = GetJSON(stock_num);
       // 歷年股利;
-      console.log("歷年股利",JSONdata.response['\u5e74\u8cc7\u6599']);
+      console.log("JSON DATA:",JSONdata.response)
+      console.log("-------------------------------------------")
+      console.log("歷年股利",JSONdata.response.年資料);
       //Echarts_Dividend(JSONdata.response['年資料']['股利']);
     </script> 
 
