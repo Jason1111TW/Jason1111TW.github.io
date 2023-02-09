@@ -106,12 +106,25 @@
     <script src="/static/js/index.js"></script>  
 
     <script>
-      var stock_num = "3010";
-      JSONdata = GetJSON(stock_num);
-      // 歷年股利;
-      console.log(JSONdata, typeof(JSONdata))
-      //Echarts_Dividend(JSONdata.response['年資料']['股利']);
+      function GetJSON(stock_num){
+        var requestURL = "/static/data/" + stock_num + ".json";
+        var request = new XMLHttpRequest();
+        request.open('GET', requestURL);
+        request.send();
+        request.onload = function() {
+          if (request.status != 200) {
+            console.log("Error on GetJSON!")
+          }
+        }
+        console.log("test",request.responseText);
+        return request.responseText
+      }
     </script> 
+    <script>
+      console.log("START GET")
+      JSONdata = GetJSON(3010);
+      console.log(JSONdata);
+    </script>
 
   </body>
     
