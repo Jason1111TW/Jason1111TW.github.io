@@ -10,21 +10,41 @@ var Echarts_Stock = function(stock_num) {
   var request = new XMLHttpRequest();
   request.open('GET', requestURL, true);
   request.send();
-  var Data = [];
   request.onload = function () {
-    var temp = JSON.parse(this.responseText);
-    Data.push(temp);
+    var Data = JSON.parse(this.responseText);
+    console.log(Data)
+    //Echarts_Dividend(Data[])
   }
-  console.log(Data[0])
+  
+}
 
+var Echarts_Dividend = function(data){
+  var myChart = echarts.init(document.querySelector(".Dividend .chart"));
+  var option = {
+    tooltip:{},
+    toolbox:{},
+    grid:{},
+    xAxis:{
+      type: 'category',
+      data: data["Time"]
+    },
+    yAxis:{
+      type: 'value'
+    },
+    series:[{
+      name: '現金股利',
+      type: 'bar',
+      data: data["現金股利"]
+    },
+    {
+      name: '股票股利',
+      type: 'bar',
+      data: data["股票股利"]
+    }]
+  }
 
-
-
-
-
-
-
-
-
-
+  myChart.setOption(option);
+  window.addEventListener('resize', function () {
+    myChart.resize();
+  })
 }
