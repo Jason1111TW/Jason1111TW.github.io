@@ -9,7 +9,7 @@ function GetJSON(stock_num){
     var data = JSON.parse(this.responseText);
     TEMP.push(data)
   }
-  return TEMP
+  return TEMP[0]
 }
 
 // 歷年股利;
