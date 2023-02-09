@@ -7,6 +7,7 @@ function GetJSON(stock_num){
   var TEMP = [];
   request.onload = function () {
     var data = JSON.parse(this.responseText);
+    console.log(data)
     TEMP.push(data)
   }
   console.log(TEMP)
