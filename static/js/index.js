@@ -3,14 +3,16 @@ function GetJSON(stock_num){
   var requestURL = "/static/data/" + stock_num + ".json";
   var request = new XMLHttpRequest();
   request.open('GET', requestURL);
-  request.setRequestHeader('Content-type','application/json');
   request.send();
   request.onload = function() {
     if (request.status != 200) {
       console.log("Error on GetJSON!")
+      console.log("1.request",this)
+      console.log("2.request.response",this.response)
+      console.log("3.request.responseText",this.responseText)
     }
   }
-  console.log("---",request)
+  console.log(request,typeof(request))
   return request
 }
 
