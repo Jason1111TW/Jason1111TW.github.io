@@ -9,7 +9,7 @@ function GetJSON(stock_num){
       console.log("Error on GetJSON!")
     }
   }
-  return request.response
+  return request
 }
 
 // 歷年股利; DIVIDEND
