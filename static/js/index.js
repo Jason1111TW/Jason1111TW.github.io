@@ -1,6 +1,7 @@
 // 讀取JSON資料;
 (function () {
-  var stock_num = "3010"
+  var stock_num = "3010";
+  
   var requestURL = "/static/data/" + stock_num + ".json";
   var request = new XMLHttpRequest();
   request.open('GET', requestURL, true);
