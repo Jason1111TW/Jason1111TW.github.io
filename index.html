@@ -110,10 +110,8 @@
       JSONdata = GetJSON(stock_num);
       // 歷年股利;
       text = JSONdata.response;
-      typeof(text);
-      temp = JSON.parse(text);
-      typeof(temp);
-      console.log(Object.keys(temp))
+      console.log(text,typeof(text))
+
       //Echarts_Dividend(JSONdata.response['年資料']['股利']);
     </script> 
 
