@@ -9,6 +9,7 @@ function GetJSON(stock_num){
     console.log("@_@",this)
     console.log(data);
   }
+  console.log("CHECK",data)
   return data
 }
 
