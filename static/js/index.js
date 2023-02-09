@@ -4,11 +4,14 @@ function GetJSON(stock_num){
   var request = new XMLHttpRequest();
   request.open('GET', requestURL, true);
   request.send();
+  var test = [];
   request.onload = function () {
     var data = JSON.parse(this.responseText);
+    test.push(data)
     console.log("@_@",this)
     console.log(data);
   }
+  console.log(test)
   console.log("CHECK",request)
   console.log("@",JSON.parse(request.responseText))
 
