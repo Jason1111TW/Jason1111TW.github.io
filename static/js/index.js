@@ -10,6 +10,20 @@
   }
 })();
 
+var stock_num = "3010"
+function GetJSON(stock_num){
+  var requestURL = "/static/data/" + stock_num + ".json";
+  var request = new XMLHttpRequest();
+  request.open('GET', requestURL);
+  request.responseType = 'json';
+  request.send();
+  request.onload = function() {
+    var temp = request.response
+  }
+  return request
+  console.log(request)
+}
+
 // 歷年股利;
 (function () {
   var myChart = echarts.init(document.querySelector(".Dividend .chart"));
