@@ -11,9 +11,8 @@ function GetJSON(stock_num){
     console.log("@_@",this)
     console.log(data);
   }
-  console.log(test)
+  console.log("---",test)
   console.log("CHECK",request)
-  console.log("@",JSON.parse(request.responseText))
 
 }
 
