@@ -10,6 +10,7 @@ function GetJSON(stock_num){
       console.log("Error on GetJSON!")
     }
   }
+  console.log("---",request)
   return request
 }
 
