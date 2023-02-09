@@ -1,16 +1,3 @@
-(function () {
-  var requestURL = "/static/data/3010.json"
-  var request = new XMLHttpRequest();
-  request.open('GET', requestURL);
-  request.responseType = 'json';
-  request.send();
-  request.onload = function() {
-    const JSONdata = request.response;
-    console.log("CHECK1~",JSONdata);
-  }
-})();
-
-var stock_num = "3010"
 function GetJSON(stock_num){
   var requestURL = "/static/data/" + stock_num + ".json";
   var request = new XMLHttpRequest();
@@ -18,14 +5,19 @@ function GetJSON(stock_num){
   request.responseType = 'json';
   request.send();
   request.onload = function() {
-    var temp = request.response
+    if (request.status != 200) {
+      console.log("Error on GetJSON!")
+    }
   }
-  return request
-  console.log(request)
+  return request.response
 }
 
+var stock_num = "3010"
+var JSONdata = GetJSON(stock_num)
+
 // 歷年股利;
-(function () {
+(function (JSONdata) {
+  console.log("Check~", JSONdata)
   var myChart = echarts.init(document.querySelector(".Dividend .chart"));
   var option = {
 
