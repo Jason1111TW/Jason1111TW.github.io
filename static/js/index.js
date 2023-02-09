@@ -12,10 +12,12 @@ function GetJSON(stock_num){
   return request.response
 }
 
-var stock_num = "3010"
-var JSONdata = GetJSON(stock_num)
-
 // 歷年股利; DIVIDEND
+
+function Echarts_DIVIDEND(){
+
+}
+
 (function () {
   console.log("Check~")
   var myChart = echarts.init(document.querySelector(".Dividend .chart"));
