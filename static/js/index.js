@@ -1,5 +1,6 @@
 // 讀取JSON資料;
 (function () {
+  var stock_num = "3010"
   var requestURL = "/static/data/" + stock_num + ".json";
   var request = new XMLHttpRequest();
   request.open('GET', requestURL, true);
@@ -11,7 +12,7 @@
     TEMP.push(data)
   }
   console.log(TEMP)
-  
+
   (function () {
       // 1.实例化对象
   var myChart = echarts.init(document.querySelector(".Dividend .chart"));
