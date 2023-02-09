@@ -1037,6 +1037,6 @@
   window.addEventListener('resize', function () {
     myChart.resize();
   })
-})();
+  })();
 })();
 
