@@ -109,9 +109,13 @@
       var stock_num = "3010";
       var JSONdata = GetJSON(stock_num);
       // 歷年股利;
-      console.log("JSON DATA:",JSONdata.response)
+      var temp = JSONdata.response
       console.log("-------------------------------------------")
-      console.log("歷年股利",JSONdata.response.年資料);
+      console.log("JSON DATA:",temp)
+      console.log("-------------------------------------------")
+      console.log(temp["年資料"])
+      console.log("-------------------------------------------")
+
       //Echarts_Dividend(JSONdata.response['年資料']['股利']);
     </script> 
 
