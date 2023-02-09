@@ -7,12 +7,13 @@ function GetJSON(stock_num){
   request.onload = function() {
     if (request.status != 200) {
       console.log("Error on GetJSON!")
-      console.log("1.request",this)
-      console.log("2.request.response",this.response)
-      console.log("3.request.responseText",this.responseText)
     }
+    console.log("1.request",this)
+    console.log("2.request.response",this.response)
+    console.log("3.request.responseText",this.responseText)
   }
   console.log(request,typeof(request))
+  console.log(request.responseText)
   return request
 }
 
