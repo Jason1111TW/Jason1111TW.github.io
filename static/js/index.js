@@ -7,7 +7,8 @@
   request.onload = function(JSONdata) {
     console.log("TEST");
     var JSONdata = request.response;
-    //console.log(JSONdata);
+    //console.log(JSONdata);  
+    
   }
   console.log(JSONdata)
 })();
