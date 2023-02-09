@@ -13,7 +13,7 @@ var Echarts_Stock = function(stock_num) {
   request.onload = function () {
     var Data = JSON.parse(this.responseText);
     console.log(Data)
-    //Echarts_Dividend(Data[])
+    Echarts_Dividend(Data["年資料"]["股利"])
   }
   
 }
