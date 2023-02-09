@@ -4,11 +4,12 @@ function GetJSON(stock_num){
   var request = new XMLHttpRequest();
   request.open('GET', requestURL, true);
   request.send();
-  request.onload = function () {
+  request.onload = function (data) {
     var data = JSON.parse(this.responseText);
     console.log("@_@",this)
     console.log(data);
   }
+  return data
 }
 
 // 歷年股利;
