@@ -4,17 +4,18 @@
   request.open('GET', requestURL);
   request.responseType = 'json';
   request.send();
-  request.onload = function() {
+  request.onload = function(JSONdata) {
     console.log("TEST");
     var JSONdata = request.response;
-    console.log(JSONdata);
+    //console.log(JSONdata);
   }
+  console.log(JSONdata)
 })();
 
 // 歷年股利;
 (function () {
   var myChart = echarts.init(document.querySelector(".Dividend .chart"));
-
+  console.log("999",JSONdata)
   var option = {
 
   }
