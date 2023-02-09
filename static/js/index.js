@@ -11,6 +11,7 @@ function GetJSON(stock_num){
   }
   console.log("CHECK",data)
   return data
+  
 }
 
 // 歷年股利;
