@@ -3,7 +3,7 @@ function GetJSON(stock_num){
   var requestURL = "/static/data/" + stock_num + ".json";
   var request = new XMLHttpRequest();
   request.open('GET', requestURL);
-  request.responseType = 'json';
+  request.setRequestHeader('Content-type','application/json');
   request.send();
   request.onload = function() {
     if (request.status != 200) {
