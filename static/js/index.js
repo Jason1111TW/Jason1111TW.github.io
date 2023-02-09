@@ -15,5 +15,16 @@ var Echarts_Stock = function(stock_num) {
     var temp = JSON.parse(this.responseText);
     Data.push(temp);
   }
-  console.log(Data)
+  console.log(Data[0])
+
+
+
+
+
+
+
+
+
+
+
 }
